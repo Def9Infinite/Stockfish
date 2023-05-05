@@ -1170,7 +1170,7 @@ moves_loop: // When in check, search starts here
       if ((ss+1)->cutoffCnt > 3)
           r++;
 
-      else if (move == ttMove)
+      else if (move == ttMove && tte->depth() >= depth - 3) 
           r--;
 
       ss->statScore =  2 * thisThread->mainHistory[us][from_to(move)]
