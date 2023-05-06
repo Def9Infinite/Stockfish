@@ -1087,7 +1087,7 @@ moves_loop: // When in check, search starts here
                   }
                   if (PvNode && (ttCapture || type_of(move) == PROMOTION))
                   {
-                      extension = 1;
+                      extension = 2;
                       depth ++;
                   }
               }
