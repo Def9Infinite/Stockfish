@@ -1085,6 +1085,11 @@ moves_loop: // When in check, search starts here
                       extension = 2;
                       depth += depth < 13;
                   }
+                  if (PvNode && (ttCapture || type_of(move) == PROMOTION))
+                  {
+                      extension = 1;
+                      depth ++;
+                  }
               }
 
               // Multi-cut pruning
